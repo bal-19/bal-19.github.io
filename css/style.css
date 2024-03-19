@@ -28,6 +28,30 @@ body {
     min-height: 100vh;
 }
 
+.mt-1 {
+    margin-top: 1rem;
+}
+
+.mt-2 {
+    margin-top: 2rem;
+}
+
+.mt-3 {
+    margin-top: 3rem;
+}
+
+.mb-1 {
+    margin-bottom: 1rem;
+}
+
+.mb-2 {
+    margin-bottom: 2rem;
+}
+
+.mb-3 {
+    margin-bottom: 3rem;
+}
+
 .hero {
     position: relative;
     width: 100%;
@@ -36,7 +60,8 @@ body {
     overflow: hidden;
 }
 
-.about {
+.about,
+.skill {
     position: relative;
     width: 100%;
     min-height: 100vh;
@@ -47,6 +72,16 @@ body {
     height: 2px;
     background: var(--bg);
     background-image: linear-gradient(to right, var(--bg), #ccc, var(--bg));
+}
+
+hr.auto-width {
+    display: block;
+    width: 100%;
+    height: 2px;
+    border: none;
+    background: var(--bg);
+    background-image: linear-gradient(to right, var(--bg), #0a8bd6, var(--bg));
+    margin: 4px 0;
 }
 
 /* Navigation style */
@@ -226,7 +261,6 @@ body {
     position: absolute;
     top: 140px;
     left: 700px;
-    /* transform: translateY(50%); */
 }
 
 .photo-profile .picture {
@@ -249,8 +283,8 @@ body {
     font-size: 1.5rem;
     font-weight: 500;
     font-style: normal;
-    margin-top: 100px;
-    margin-bottom: 1rem;
+    margin-top: 20px;
+    margin-bottom: 5px;
     text-shadow: 0 2px 2px rgb(0 0 0 / 0.4);
     color: var(--icon-clr);
     text-align: center;
@@ -276,6 +310,8 @@ body {
 
 .card-img {
     width: 348px;
+    border: #e9ecef solid 5px;
+    box-shadow: 0 8px 24px hsla(0, 0%, 0%, .15);
     border-radius: 1.5rem;
 }
 
@@ -324,6 +360,25 @@ body {
 
 .card-article:not(:hover) .card-data {
     animation: remove-data 1s forwards;
+}
+
+
+/* Skill section style */
+.skill-container {
+    margin-top: 100px;
+    display: grid;
+    place-items: center;
+    margin-inline: 1rem;
+    padding-block: 5rem;
+}
+
+.logo-program-lang {
+    display: grid;
+    row-gap: 2rem;
+}
+
+.logo {
+    position: relative;
 }
 
 
@@ -384,7 +439,10 @@ body {
 
 /* small media */
 @media screen and (max-width: 400px) {
-    .about-container {
+
+    .about-container,
+    .skill-container {
+        margin-top: 1rem;
         margin-inline: 1rem;
     }
 
@@ -396,7 +454,10 @@ body {
 
 /* medium media */
 @media screen and (min-width: 768px) {
-    .card-container {
+
+    .card-container,
+    .logo-program-lang {
+        margin-top: 1.5rem;
         grid-template-columns: repeat(2, 1fr);
         column-gap: 1.5rem;
     }
@@ -404,11 +465,15 @@ body {
 
 /* large media */
 @media screen and (min-width: 1120px) {
-    .about-container {
+
+    .about-container,
+    .skill-container {
         height: 100vh;
     }
 
-    .card-container {
+    .card-container,
+    .logo-program-lang {
+        margin-top: -6rem;
         grid-template-columns: repeat(3, 1fr);
         column-gap: 2rem;
     }
