@@ -9,7 +9,7 @@ list.forEach((item) => item.addEventListener("click", activeLink));
 // scrolling animation
 const homeElement = document.querySelector("#home");
 const aboutElement = document.querySelector("#about");
-const techElement = document.querySelector("#tech");
+const skillElement = document.querySelector("#skill");
 const projectElement = document.querySelector("#project");
 const contactElement = document.querySelector("#contact");
 
@@ -29,12 +29,12 @@ document
     scrollToElement(aboutElement);
   });
 
-// #tech
+// #skill
 document
-  .querySelector('a[href="#tech"]')
+  .querySelector('a[href="#skill"]')
   .addEventListener("click", function (e) {
     e.preventDefault();
-    scrollToElement(techElement);
+    scrollToElement(skillElement);
   });
 
 // #project
